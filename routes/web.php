@@ -15,12 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/', 'StaticPagesController@home')->name('home');
-Route::get('/help', 'StaticPagesController@help')->name('help');
-Route::get('/about', 'StaticPagesController@about')->name('about');
+Route::get('/', 'StaticPagesController@home')->name('home');//首页
+Route::get('/help', 'StaticPagesController@help')->name('help');//帮助页
+Route::get('/about', 'StaticPagesController@about')->name('about');//关于页
 
 Route::get('signup', 'UsersController@create')->name('signup');
-Route::resource('users', 'UsersController');
+Route::resource('users', 'UsersController');//用户
 
 //登录注册
 Route::get('login', 'SessionsController@create')->name('login');
@@ -28,7 +28,7 @@ Route::post('login', 'SessionsController@store')->name('login');
 Route::delete('logout', 'SessionsController@destroy')->name('logout');
 
 //注册邮箱验证
-Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');
+Route::get('signup/confirm/{token}', 'UsersController@confirmEmail')->name('confirm_email');//邮箱验证
 
 //密码重设
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');//显示重置密码的邮箱发送页面
@@ -37,7 +37,7 @@ Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');//执行密码更新操作
 
 //微博路由
-Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);
+Route::resource('statuses', 'StatusesController', ['only' => ['store', 'destroy']]);//资源路由
 
 //粉丝列表
 Route::get('/users/{user}/followings', 'UsersController@followings')->name('users.followings');//显示用户的关注人列表
