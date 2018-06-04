@@ -9,6 +9,36 @@
 * 关注用户
 * 查看关注用户的微博动态
 
+## 开发环境部署
+
+1. 克隆源代码
+
+```bash
+git clone git@github.com:liujianzero/sample.git
+```
+
+2. 安装扩展包依赖
+
+```bash
+composer install
+```
+
+3. 生成配置文件
+   
+```bash
+cp .env.example .env
+```
+
+4. 数据库迁移
+
+```bash
+php artisan migrate --seed
+```
+
+5. 使用 Heroku 部署一个 Laravel 应用到生产环境上
+
+6. 至此完成安装
+
 ## 文件夹结构简介
 
 | 文件夹名称 | 简介 |
