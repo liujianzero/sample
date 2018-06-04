@@ -46,3 +46,7 @@
 | yarn.lock | Yarn 依赖版本锁定文件 |
 | .gitignore | 被 Git 所忽略的文件 |
 | .env | 环境变量配置文件 |
+
+## 更新日志
+
+请查阅 [更新日志](./CHANGELOG.md)
