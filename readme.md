@@ -39,6 +39,44 @@ php artisan migrate --seed
 
 6. 至此完成安装
 
+## 开发注意
+
+新建分支进行编写代码
+```bash
+git checkout master 
+```
+
+```bash
+git checkout -b XXX
+```
+
+更改的代码进行提交，并切回到主分支上进行合并
+```bash
+git add -A
+```
+
+```bash
+git commit -m "提交内容"
+```
+
+```bash
+git checkout master
+```
+
+```bash
+git merge XXX
+```
+
+将代码推送到 GitHub 和 Heroku 上
+
+```bash
+git push
+```
+
+```bash
+git push heroku master
+```
+
 ## 文件夹结构简介
 
 | 文件夹名称 | 简介 |
